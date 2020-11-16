@@ -2,8 +2,11 @@ package com.eliavco.trafficsigns;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,20 +17,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Dal dal = new Dal(this);
+    }
 
-        ArrayList<Test> tests = dal.getAllTests();
-        for (int i = 0; i < tests.size(); i++) {
-            Test t = tests.get(i);
-            Log.i("important bla", t + "");
-        }
-        dal.deleteTest(9);
-        Log.i("important bla", "DELETING ****");
-        tests = dal.getAllTests();
-        for (int i = 0; i < tests.size(); i++) {
-            Test t = tests.get(i);
-            Log.i("important bla", t + "");
-        }
-
+    public void openCatalog(View view) {
+        Intent intent = new Intent(this, SignsCatalogActivity.class);
+//        intent.putExtra(EXTRA_MESSAGE, message); // PASS DATA
+        startActivity(intent);
     }
 }
