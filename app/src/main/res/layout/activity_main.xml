@@ -4,68 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="16dp"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button"
-        android:layout_width="143dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="#2196F3"
-        android:onClick="openCatalog"
-        android:text="עזרה"
+        android:layout_width="345dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#8BC34A"
+        android:text="@string/home_history"
         android:textColor="#FFFFFF"
-        android:textDirection="locale"
-        android:textSize="30sp"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="143dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#2196F3"
-        android:text="עזרה"
+        android:layout_width="345dp"
+        android:layout_height="155dp"
+        android:backgroundTint="#03A9F4"
+        android:text="@string/home_catalog"
         android:textColor="#FFFFFF"
-        android:textDirection="locale"
-        android:textSize="30sp"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="143dp"
-        android:layout_height="66dp"
-        android:backgroundTint="#2196F3"
-        android:text="עזרה"
+        android:layout_width="345dp"
+        android:layout_height="103dp"
+        android:backgroundTint="#F44336"
+        android:text="@string/home_test"
         android:textColor="#FFFFFF"
-        android:textDirection="locale"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.561"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="143dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="#2196F3"
-        android:text="עזרה"
+        android:layout_width="345dp"
+        android:layout_height="103dp"
+        android:backgroundTint="#00BCD4"
+        android:text="@string/home_highscore"
         android:textColor="#FFFFFF"
-        android:textDirection="locale"
-        android:textSize="30sp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.561"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="345dp"
+        android:layout_height="103dp"
+        android:backgroundTint="#FFEB3B"
+        android:text="@string/home_help"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

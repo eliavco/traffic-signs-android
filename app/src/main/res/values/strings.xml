@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Traffic Signs</string>
+    <string name="app_name">אליאב כהן - תמרורים</string>
+    <string name="home_help">עזרה והוראות</string>
+    <string name="home_history">היסטוריית מבחנים</string>
+    <string name="home_highscore">שיאים</string>
+    <string name="home_test">בוחן תמרורים</string>
+    <string name="home_catalog">קטלוג תמרורים</string>
 </resources>
