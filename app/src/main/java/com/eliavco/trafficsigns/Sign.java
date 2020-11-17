@@ -38,16 +38,14 @@ public class Sign {
         this._id = _id;
     }
 
-    public String getId() {
-        return id;
-    }
+    public String getId() { return this.id.trim(); }
 
     public void setId(String id) {
         this.id = id;
     }
 
     public String getCategory() {
-        return category;
+        return this.category.trim();
     }
 
     public void setCategory(String category) {
@@ -55,7 +53,7 @@ public class Sign {
     }
 
     public String getGroup() {
-        return group;
+        return this.group.trim();
     }
 
     public void setGroup(String group) {
@@ -63,7 +61,7 @@ public class Sign {
     }
 
     public String getMeaning() {
-        return meaning;
+        return this.meaning.trim();
     }
 
     public void setMeaning(String meaning) {
@@ -71,7 +69,7 @@ public class Sign {
     }
 
     public String getPurpose() {
-        return purpose;
+        return this.purpose.trim();
     }
 
     public void setPurpose(String purpose) {
@@ -79,7 +77,7 @@ public class Sign {
     }
 
     public String getPower() {
-        return power;
+        return this.power.trim();
     }
 
     public void setPower(String power) {

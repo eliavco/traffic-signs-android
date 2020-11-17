@@ -21,11 +21,11 @@ public class SignDetailsActivity extends AppCompatActivity {
         Dal dal = new Dal(this);
         this.s = dal.getSign(sid);
         this.setImage();
-        this.setDetails(R.id.signId, this.s.getId().trim());
-        this.setDetails(R.id.signCategory, this.s.getCategory().trim());
+        this.setDetails(R.id.signId, this.s.getId());
+        this.setDetails(R.id.signCategory, this.s.getCategory());
         this.setDetails(R.id.signGroup, this.s.getGroup());
         this.setDetails(R.id.signMeaning, this.s.getMeaning());
-        this.setDetails(R.id.signPurpose, this.s.getPurpose().trim());
+        this.setDetails(R.id.signPurpose, this.s.getPurpose());
         this.setDetails(R.id.signPower, this.s.getPower());
     }
 
