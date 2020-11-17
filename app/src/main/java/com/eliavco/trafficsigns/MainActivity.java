@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void openCatalog(View view) {
         Intent intent = new Intent(this, SignsCatalogActivity.class);
-//        intent.putExtra(EXTRA_MESSAGE, message); // PASS DATA
         startActivity(intent);
     }
 }

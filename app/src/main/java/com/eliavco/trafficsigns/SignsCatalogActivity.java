@@ -3,6 +3,7 @@ package com.eliavco.trafficsigns;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,8 +17,8 @@ public class SignsCatalogActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signs_catalog);
         Dal dal = new Dal(this);
         this.signs = dal.getAllSigns();
-        ListView signsView = findViewById(R.id.listSigns);
-        SignsAdapterHome adap = new SignsAdapterHome(this, R.layout.sign_layout, this.signs);
+        GridView signsView = findViewById(R.id.gridSigns);
+        SignsAdapterHome adap = new SignsAdapterHome(this, R.layout.sign_layout, this.signs, getAssets());
         signsView.setAdapter(adap);
     }
 }

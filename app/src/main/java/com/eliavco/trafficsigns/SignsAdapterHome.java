@@ -1,15 +1,22 @@
 package com.eliavco.trafficsigns;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,12 +24,14 @@ public class SignsAdapterHome extends ArrayAdapter<Sign> {
     private Context ctx;
     private ArrayList<Sign> arr;
     private int resourceId;
+    private AssetManager assets;
 
-    public SignsAdapterHome(@NonNull Context context, int resource, @NonNull ArrayList<Sign> objects) {
+    public SignsAdapterHome(@NonNull Context context, int resource, @NonNull ArrayList<Sign> objects, AssetManager assets) {
         super(context, resource, objects);
         this.ctx = context;
         this.resourceId = resource;
         this.arr = objects;
+        this.assets = assets;
     }
 
     @Override
@@ -35,9 +44,21 @@ public class SignsAdapterHome extends ArrayAdapter<Sign> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater li = (LayoutInflater)(this.ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
         View v = li.inflate(this.resourceId, null);
-        Sign s = this.arr.get(position);
-        TextView groupTitle = v.findViewById(R.id.groupTitle);
-        groupTitle.setText(s.getGroup());
+        final Sign s = this.arr.get(position);
+        ImageButton imgb = v.findViewById(R.id.signImageButton);
+        imgb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String idSign = s.getId();
+                Intent intent = new Intent(ctx, SignDetailsActivity.class);
+                intent.putExtra("SIGN_ID", idSign);
+                ctx.startActivity(intent);
+            }
+        });
+        try {
+            Drawable d = s.getImage(this.assets);
+            imgb.setImageDrawable(d);
+        } catch(Exception e) {}
         return v;
     }
 }

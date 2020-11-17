@@ -5,4 +5,5 @@
     <string name="home_highscore">שיאים</string>
     <string name="home_test">בוחן תמרורים</string>
     <string name="home_catalog">קטלוג תמרורים</string>
+    <string name="catalog_image">תמונה של תמרור</string>
 </resources>
