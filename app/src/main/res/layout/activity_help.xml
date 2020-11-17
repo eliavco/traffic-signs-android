@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelpActivity">
+
+    <ScrollView
+        android:id="@+id/helpScrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/helpContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/goalTitleHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_goal_title"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/goalTextHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/help_goal"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="4dp"
+                android:textDirection="rtl"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/separatorGoalFunctionsHelp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/functionsTitleHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_functions_title"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/functionsTextHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_functions"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="4dp"
+                android:textDirection="rtl"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/separatorFunctionsHomeHelp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/homeTitleHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_home_title"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/homeTextHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_home"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="4dp"
+                android:textDirection="rtl"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/separatorHomeHelpHelp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/helpTitleHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_help_title"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/helpTextHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_help"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="4dp"
+                android:textDirection="rtl"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/separatorHelpCatalogHelp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/catalogTitleHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_catalog_title"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/catalogTextHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_catalog"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="4dp"
+                android:textDirection="rtl"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/separatorCatalogTestHelp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/testTitleHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_test_title"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/testTextHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_test"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="4dp"
+                android:textDirection="rtl"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/separatorTestHistoryHelp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/historyTitleHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_history_title"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/historyTextHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_history"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="4dp"
+                android:textDirection="rtl"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/separatorHistoryRecordsHelp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/recordsTitleHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_records_title"
+                android:textSize="24sp"
+                android:layout_marginHorizontal="8dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/recordsTextHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_records"
+                android:textDirection="rtl"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/separatorRecordsGoodluckHelp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/goodluckTitleHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_goodluck_title"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/goodluckTextHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_goodluck"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="4dp"
+                android:textDirection="rtl"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/separatorGoodluckHelp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <VideoView
+                android:id="@+id/videoview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                app:layout_constraintDimensionRatio="4:3"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

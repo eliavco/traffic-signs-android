@@ -26,6 +26,7 @@
         android:layout_width="345dp"
         android:layout_height="103dp"
         android:backgroundTint="#FFEB3B"
+        android:onClick="openHelp"
         android:text="@string/home_help"
         android:textColor="#000000"
         android:textDirection="rtl"
