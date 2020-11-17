@@ -4,14 +4,252 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#000000"
     tools:context=".SignDetailsActivity">
 
-    <TextView
-        android:id="@+id/signTitle"
+    <ImageView
+        android:id="@+id/signImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="72dp"
+        android:contentDescription="@string/catalog_image"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollContainerDetails"
+        android:layout_height="330dp"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signImage"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableLayout
+            android:id="@+id/signDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layoutDirection="rtl"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:id="@+id/signIdContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/signIdLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:labelFor="@id/signId"
+                    android:text="@string/sign_details_label_id"
+                    android:textAlignment="textEnd"
+                    android:textDirection="rtl"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/signId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:textDirection="rtl"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <View
+                android:id="@+id/separatorIdCategory"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TableRow
+                android:id="@+id/signCategoryContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/signCategoryLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:labelFor="@id/signCategory"
+                    android:text="@string/sign_details_label_category"
+                    android:textAlignment="textEnd"
+                    android:textDirection="rtl"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/signCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:textDirection="rtl"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <View
+                android:id="@+id/separatorCategoryGroup"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TableRow
+                android:id="@+id/signGroupContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/signGroupLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:labelFor="@id/signGroup"
+                    android:text="@string/sign_details_label_group"
+                    android:textAlignment="textEnd"
+                    android:textDirection="rtl"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/signGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:textDirection="rtl"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <View
+                android:id="@+id/separatorGroupMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TableRow
+                android:id="@+id/signMeaningContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/signMeaningLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:labelFor="@id/signMeaning"
+                    android:text="@string/sign_details_label_meaning"
+                    android:textAlignment="textEnd"
+                    android:textDirection="rtl"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/signMeaning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:textDirection="rtl"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <View
+                android:id="@+id/separatorMeaningPurpose"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TableRow
+                android:id="@+id/signPurposeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/signPurposeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:labelFor="@id/signPurpose"
+                    android:text="@string/sign_details_label_purpose"
+                    android:textAlignment="textEnd"
+                    android:textDirection="rtl"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/signPurpose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:textDirection="rtl"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <View
+                android:id="@+id/separatorPurposePower"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TableRow
+                android:id="@+id/signPowerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/signPowerLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:labelFor="@id/signPower"
+                    android:text="@string/sign_details_label_power"
+                    android:textAlignment="textEnd"
+                    android:textDirection="rtl"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/signPower"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:textDirection="rtl"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp" />
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

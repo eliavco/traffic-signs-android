@@ -18,7 +18,7 @@ public class SignsCatalogActivity extends AppCompatActivity {
         Dal dal = new Dal(this);
         this.signs = dal.getAllSigns();
         GridView signsView = findViewById(R.id.gridSigns);
-        SignsAdapterHome adap = new SignsAdapterHome(this, R.layout.sign_layout, this.signs, getAssets());
+        SignsAdapterHome adap = new SignsAdapterHome(this, R.layout.sign_layout, this.signs);
         signsView.setAdapter(adap);
     }
 }

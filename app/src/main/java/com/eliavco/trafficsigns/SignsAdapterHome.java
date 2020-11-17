@@ -2,7 +2,6 @@ package com.eliavco.trafficsigns;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -24,14 +23,12 @@ public class SignsAdapterHome extends ArrayAdapter<Sign> {
     private Context ctx;
     private ArrayList<Sign> arr;
     private int resourceId;
-    private AssetManager assets;
 
-    public SignsAdapterHome(@NonNull Context context, int resource, @NonNull ArrayList<Sign> objects, AssetManager assets) {
+    public SignsAdapterHome(@NonNull Context context, int resource, @NonNull ArrayList<Sign> objects) {
         super(context, resource, objects);
         this.ctx = context;
         this.resourceId = resource;
         this.arr = objects;
-        this.assets = assets;
     }
 
     @Override
@@ -56,7 +53,7 @@ public class SignsAdapterHome extends ArrayAdapter<Sign> {
             }
         });
         try {
-            Drawable d = s.getImage(this.assets);
+            Drawable d = s.getImage(this.ctx.getAssets());
             imgb.setImageDrawable(d);
         } catch(Exception e) {}
         return v;
