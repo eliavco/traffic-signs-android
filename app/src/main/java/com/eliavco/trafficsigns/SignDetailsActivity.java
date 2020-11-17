@@ -1,12 +1,15 @@
 package com.eliavco.trafficsigns;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.graphics.text.LineBreaker;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +20,8 @@ public class SignDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_details);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // INITIALIZE BACK BUTTON
+
         String sid = getIntent().getStringExtra("SIGN_ID");
         Dal dal = new Dal(this);
         this.s = dal.getSign(sid);
@@ -43,5 +48,10 @@ public class SignDetailsActivity extends AppCompatActivity {
             Drawable d = this.s.getImage(getAssets());
             signImage.setImageDrawable(d);
         } catch(Exception e) {}
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        finish();
+        return true;
     }
 }
