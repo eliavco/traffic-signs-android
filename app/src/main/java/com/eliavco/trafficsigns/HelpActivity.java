@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.MediaController;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -23,6 +24,7 @@ public class HelpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); // INITIALIZE BACK BUTTON
+        getSupportActionBar().setTitle(getString(R.string.app_name_help)); // INITIALIZE NEW TITLE
         this.forceRTLIfSupported();
         this.justifyHelpParagraphs();
         this.mVideoView = findViewById(R.id.videoview);
@@ -59,7 +61,7 @@ public class HelpActivity extends AppCompatActivity {
         MediaController controller = new MediaController(this);
         controller.setMediaPlayer(mVideoView);
         this.mVideoView.setMediaController(controller);
-        this.mVideoView.start();
+        ((ScrollView) findViewById(R.id.helpScrollContainer)).smoothScrollTo(0,0); // GO Back to top
     }
 
     private void releasePlayer() {

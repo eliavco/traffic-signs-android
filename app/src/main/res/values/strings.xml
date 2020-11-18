@@ -1,17 +1,26 @@
 <resources>
     <string name="app_name">אליאב כהן - תמרורים</string>
+    <string name="app_name_help">עזרה</string>
+    <string name="app_name_test">בוחן</string>
+    <string name="app_name_details">פרטי תמרור</string>
+    <string name="app_name_catalog">קטלוג תמרורים</string>
+    <string name="app_name_history">היסטורית מבחנים</string>
+    <string name="app_name_records">שיאי מבחנים</string>
+
     <string name="home_help">עזרה והוראות</string>
     <string name="home_history">היסטוריית מבחנים</string>
     <string name="home_highscore">שיאים</string>
     <string name="home_test">בוחן תמרורים</string>
     <string name="home_catalog">קטלוג תמרורים</string>
     <string name="catalog_image">תמונה של תמרור</string>
+
     <string name="sign_details_label_id">סמל התמרור:</string>
     <string name="sign_details_label_category">קטגוריה:</string>
     <string name="sign_details_label_group">קבוצה:</string>
     <string name="sign_details_label_meaning">פירוש:</string>
     <string name="sign_details_label_purpose">משמעות:</string>
     <string name="sign_details_label_power">כוחו יפה:</string>
+
     <string name="help_goal_title">מטרת האפליקצייה</string>
     <string name="help_goal">
         מטרת היישומון הוא לאפשר למידה קלה לקראת מבחני התיאוריה בעזרת לימוד תמרורים.

@@ -20,6 +20,8 @@ public class SignsCatalogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signs_catalog);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); // INITIALIZE BACK BUTTON
+        getSupportActionBar().setTitle(getString(R.string.app_name_catalog)); // INITIALIZE NEW TITLE
+
         this.forceRTLIfSupported();
 
         Dal dal = new Dal(this);

@@ -23,13 +23,24 @@ public class SignDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_details);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); // INITIALIZE BACK BUTTON
+
         this.forceRTLIfSupported();
 
         String sid = getIntent().getStringExtra("SIGN_ID");
         Dal dal = new Dal(this);
         this.s = dal.getSign(sid);
+        getSupportActionBar().setTitle(getString(R.string.app_name_details) + ": " + this.s.getId()); // INITIALIZE NEW TITLE
         this.setImage();
-        this.setDetailsToView(this.s.getId(), this.s.getCategory(), this.s.getGroup(), this.s.getMeaning(), this.s.getPurpose(), this.s.getPower());
+        this.setDetailsToView(this.s.getId(), this.s.getCategory(), this.formatGroup(this.s.getGroup(), this.s.getCategory()), this.s.getMeaning(), this.s.getPurpose(), this.s.getPower());
+    }
+
+    protected String formatGroup(String original, String category) {
+        int index = original.indexOf(category);
+        if (index > -1) {
+            int startIndex = index + category.length() + 2;
+            original = original.substring(startIndex);
+        }
+        return original;
     }
 
     protected void setDetails(int dId, String value) {
