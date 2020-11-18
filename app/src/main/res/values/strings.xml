@@ -7,6 +7,17 @@
     <string name="app_name_history">היסטורית מבחנים</string>
     <string name="app_name_records">שיאי מבחנים</string>
 
+    <string name="history_tests_user_label">משתמש</string>
+    <string name="history_tests_time_label">זמן</string>
+    <string name="history_tests_date_label">תאריך</string>
+    <string name="history_tests_grade_label">ציון</string>
+
+    <string name="history_tests_empty">אין מבחנים להציג</string>
+
+    <string name="history_tests_confirm_delete">האם אתם בטוחים שברצונכם למחוק את המבחן מהתאריך</string>
+    <string name="history_tests_confirm_delete_positive">כן</string>
+    <string name="history_tests_confirm_delete_negative">בטל</string>
+
     <string name="home_help">עזרה והוראות</string>
     <string name="home_history">היסטוריית מבחנים</string>
     <string name="home_highscore">שיאים</string>

@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h1>Hello</h1>
+    </body>
+    <script>
+        let data = '<<<PLACEHOLDER>>>';
+        data = JSON.parse(data).map(d => {
+            d.date = new Date(d.date);
+            return d;
+        });
+    </script>
+    <script>
+        document.querySelector('h1').style.color='red';
+        document.querySelector('h1').innerText = data[3].date;
+    </script>
+</html>

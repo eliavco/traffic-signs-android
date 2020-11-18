@@ -22,14 +22,29 @@ public class MainActivity extends AppCompatActivity {
         this.forceRTLIfSupported();
     }
 
-    public void openCatalog(View view) {
-        Intent intent = new Intent(this, SignsCatalogActivity.class);
+    public void openView(Class activity) {
+        Intent intent = new Intent(this, activity);
         startActivity(intent);
     }
 
+    public void openCatalog(View view) {
+        this.openView(SignsCatalogActivity.class);
+    }
+
     public void openHelp(View view) {
-        Intent intent = new Intent(this, HelpActivity.class);
-        startActivity(intent);
+        this.openView(HelpActivity.class);
+    }
+
+    public void openHistory(View view) {
+        this.openView(HistoryActivity.class);
+    }
+
+    public void openTest(View view) {
+        this.openView(TestActivity.class);
+    }
+
+    public void openRecords(View view) {
+        this.openView(RecordsActivity.class);
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
