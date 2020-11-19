@@ -2,7 +2,7 @@ package com.eliavco.trafficsigns;
 
 import java.util.Date;
 
-public class Test {
+public class Test implements Comparable<Test> {
     private long id;
     private long date;
     private String user;
@@ -58,6 +58,12 @@ public class Test {
 
     public void setGrade(int grade) {
         this.grade = grade;
+    }
+
+    @Override
+    public int compareTo(Test other) {
+        if (other.getGrade() == this.grade) return (int)(this.time - other.getTime());
+        return other.getGrade() - this.grade;
     }
 
     @Override

@@ -37,6 +37,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         this.dal = new Dal(this);
         this.tests = this.dal.getAllTests();
+        Collections.reverse(this.tests);
         this.setTests();
 
         this.initializeChart();
@@ -44,7 +45,6 @@ public class HistoryActivity extends AppCompatActivity {
 
     protected void setTests() {
         ListView testsView = findViewById(R.id.listTestsHistory);
-        Collections.reverse(this.tests);
         TestAdapterHistory adap = new TestAdapterHistory(this, R.layout.test_history_layout, this.tests);
         testsView.setAdapter(adap);
         testsView.setEmptyView(findViewById(R.id.emptyElementTestsHistory));
