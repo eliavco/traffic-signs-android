@@ -68,7 +68,6 @@ public class HistoryActivity extends AppCompatActivity {
 
     private String injectData(String rawHtml) {
         String data = new Gson().toJson(this.tests);
-        Log.i("important data", data);
         String newHtml = rawHtml.replace("<<<PLACEHOLDER>>>", data);
         return newHtml;
     }
@@ -78,7 +77,10 @@ public class HistoryActivity extends AppCompatActivity {
         if (this.tests.size() < 1) { this.chart.setVisibility(View.GONE); }
         String html = this.getAssetFile("html/chart.html");
         html = injectData(html);
+        html = html.replaceAll("#", "%23");
         this.chart.getSettings().setJavaScriptEnabled(true);
+        this.chart.getSettings().setDomStorageEnabled(true);
+        this.chart.setWebContentsDebuggingEnabled(true);
         this.chart.loadData(html, "text/html", "utf-8");
     }
 
