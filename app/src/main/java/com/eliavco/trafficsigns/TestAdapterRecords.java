@@ -30,8 +30,8 @@ public class TestAdapterRecords extends ArrayAdapter<Test> {
         super(context, resource, objects);
         this.ctx = context;
         this.resourceId = resource;
-        this.arr = objects;
-        if (this.arr.size() > 3) {
+        this.arr = new ArrayList<Test>();
+        if (objects.size() > 3) {
             this.arr = new ArrayList<Test>(objects.subList(3, objects.size()));
         }
     }
@@ -75,7 +75,7 @@ public class TestAdapterRecords extends ArrayAdapter<Test> {
         View v = li.inflate(this.resourceId, null);
         Test t = this.arr.get(position);
 
-        this.setPropertyText(v, R.id.idTestRecords, position + 3 + "");
+        this.setPropertyText(v, R.id.idTestRecords, position + 4 + "");
         this.setPropertyText(v, R.id.userTestRecords, t.getUser());
         this.setPropertyText(v, R.id.timeTestRecords, this.formatTime(t.getTime()));
         this.setPropertyText(v, R.id.dateTestRecords, this.formatDate(t.getDate()));

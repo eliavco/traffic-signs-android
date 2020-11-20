@@ -27,6 +27,24 @@
                 android:layout_height="match_parent"
                 android:numColumns="3" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/emptyElementTestsRecords">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/history_tests_empty"
+                    android:textColor="#525252"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -38,21 +56,6 @@
                 android:id="@+id/listTestsRecords"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-
-            <TextView
-                android:id="@+id/emptyElementTestsRecords"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/history_tests_empty"
-                android:textColor="#525252"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
     </LinearLayout>
 

@@ -3,11 +3,11 @@ package com.eliavco.trafficsigns;
 import java.util.Date;
 
 public class Test implements Comparable<Test> {
-    private long id;
-    private long date;
-    private String user;
-    private long time;
-    private int grade;
+    protected long id;
+    protected long date;
+    protected String user;
+    protected long time;
+    protected int grade;
 
     public Test() {}
 
@@ -34,6 +34,10 @@ public class Test implements Comparable<Test> {
 
     public void setDate(long date) {
         this.date = date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date.getTime();
     }
 
     public String getUser() {

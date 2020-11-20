@@ -89,6 +89,10 @@ public class Dal extends SQLiteAssetHelper {
         return t;
     }
 
+    public void addTest(Test t) {
+        this.addTest(t.getDate(), t.getUser(), t.getTime(), t.getGrade());
+    }
+
     public void addTest(Date date, String user, long time, int grade) {
         SQLiteDatabase db = getWritableDatabase();
         String sqlInsert = "INSERT INTO tests (t_date, user, t_time, grade) VALUES (?, ?, ?, ?);";

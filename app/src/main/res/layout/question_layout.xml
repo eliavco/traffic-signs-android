@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionTestAdapter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/testQuestionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textDirection="rtl"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+            android:textDirection="rtl">
+
+            <ImageView
+                android:id="@+id/testQuestionImageSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/test_question_image_description" />
+
+            <RadioGroup
+                android:id="@+id/answersGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layoutDirection="rtl"
+                android:textDirection="rtl">
+
+                <RadioButton
+                    android:id="@+id/answerTestChoiceOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:textDirection="rtl" />
+
+                <View
+                    android:id="@+id/dividerAnswerTestChoiceOneTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <RadioButton
+                    android:id="@+id/answerTestChoiceTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:textDirection="rtl" />
+
+                <View
+                    android:id="@+id/dividerAnswerTestChoiceTwoThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <RadioButton
+                    android:id="@+id/answerTestChoiceThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:textDirection="rtl" />
+
+                <View
+                    android:id="@+id/dividerAnswerTestChoiceThreeFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <RadioButton
+                    android:id="@+id/answerTestChoiceFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:textDirection="rtl" />
+
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
