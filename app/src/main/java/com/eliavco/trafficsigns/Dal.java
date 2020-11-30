@@ -110,4 +110,15 @@ public class Dal extends SQLiteAssetHelper {
         String sqlRemove = "DELETE FROM tests WHERE (id=" + id + ");";
         db.execSQL(sqlRemove);
     }
+
+    public ArrayList<String> getSignsCategories() {
+        ArrayList<String> arr = new ArrayList<String>();
+        String st = "SELECT category FROM signs GROUP BY category;";
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery(st, null);
+        while (cursor.moveToNext()) {
+            arr.add(cursor.getString(cursor.getColumnIndex("category")));
+        }
+        return arr;
+    }
 }

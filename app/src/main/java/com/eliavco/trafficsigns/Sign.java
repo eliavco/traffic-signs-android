@@ -101,6 +101,10 @@ public class Sign {
         this.image = image;
     }
 
+    public String[] getSearchableFields() {
+        return new String[]{ this.getId(), this.getGroup(), this.getMeaning(), this.getPower(), this.getPurpose() };
+    }
+
     @Override
     public String toString() {
         return "Sign{" +
