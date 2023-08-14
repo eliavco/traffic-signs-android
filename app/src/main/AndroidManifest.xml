@@ -9,13 +9,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecordsActivity"></activity>
-        <activity android:name=".TestActivity" />
-        <activity android:name=".HistoryActivity" />
-        <activity android:name=".HelpActivity" />
-        <activity android:name=".SignDetailsActivity" />
-        <activity android:name=".SignsCatalogActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".RecordsActivity"
+            android:exported="true"
+            />
+        <activity
+            android:name=".TestActivity"
+            android:exported="true"
+            />
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="true"
+            />
+        <activity
+            android:name=".HelpActivity"
+            android:exported="true"
+            />
+        <activity
+            android:name=".SignDetailsActivity"
+            android:exported="true"
+            />
+        <activity
+            android:name=".SignsCatalogActivity"
+            android:exported="true"
+            />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
